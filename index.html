@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Civic Mason — a threshold into building communities and the next layer of the internet.">
+  <meta name="govhub-origin" content="https://govhub.live">
+  <title>Civic Mason</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/cm-initiation.css">
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div id="cm-root" class="cm-root" data-cm-stage="threshold" data-cm-mode="fallback">
+    <canvas id="cm-canvas" aria-hidden="true"></canvas>
+    <div class="cm-fallback-bg" aria-hidden="true"></div>
+
+    <div class="cm-ui">
+      <section
+        class="cm-panel cm-panel--threshold"
+        data-cm-panel="threshold"
+        aria-labelledby="cm-become">
+        <div class="cm-panel-inner">
+          <p class="cm-kicker">You are early.</p>
+          <p class="cm-subkicker">The door is open.</p>
+          <button type="button" class="cm-title-btn" id="cm-become">
+            Become a Civic Mason
+          </button>
+          <p class="cm-tagline">Step through.</p>
+        </div>
+      </section>
+
+      <section class="cm-panel" data-cm-panel="guided" aria-label="Guided entry">
+        <div class="cm-panel-inner">
+          <div class="cm-guided-copy">
+            <p>This is a place where people build what their communities and the internet will become.</p>
+            <p>You are not here to watch. You are here to build.</p>
+          </div>
+          <button type="button" class="cm-btn cm-btn-primary" id="cm-guided-continue">Continue</button>
+        </div>
+      </section>
+
+      <section class="cm-panel" data-cm-panel="walk" aria-label="Walk forward">
+        <div class="cm-panel-inner">
+          <div class="cm-walk-zone" id="cm-walk-zone" role="button" tabindex="0" data-cm-walk-step="0">
+            <p class="cm-walk-hint">Tap to walk forward</p>
+            <p class="cm-walk-step visually-hidden" id="cm-walk-count" aria-live="polite"></p>
+          </div>
+          <p class="cm-tagline" style="margin:0;">Paths appear as you move.</p>
+        </div>
+      </section>
+
+      <section class="cm-panel" data-cm-panel="paths" aria-label="Choose a path">
+        <div class="cm-panel-inner">
+          <p class="cm-kicker" style="margin-bottom:1rem;">How will you build?</p>
+          <div class="cm-paths-grid">
+            <button type="button" class="cm-path cm-path--suggested" data-cm-path="community">
+              <p class="cm-path-hint">Suggested</p>
+              <p class="cm-path-title">Strengthen your community</p>
+              <p class="cm-path-desc">Local projects, listening, and building where you are.</p>
+            </button>
+            <button type="button" class="cm-path" data-cm-path="internet">
+              <p class="cm-path-title">Improve the internet</p>
+              <p class="cm-path-desc">Governance, systems, and the layer we share online.</p>
+            </button>
+            <button type="button" class="cm-path" data-cm-path="cell">
+              <p class="cm-path-title">Start a Civic Mason cell</p>
+              <p class="cm-path-desc">Organize others and form a small circle of builders.</p>
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <div id="cm-live" class="visually-hidden" aria-live="polite" aria-atomic="true"></div>
+
+  <footer class="cm-foot">
+    <p>Coordination lives on <a data-cm-govhub="home" href="https://govhub.live/soft-launch/">GovHub</a>.</p>
+    <noscript>
+      <p><a href="https://govhub.live/soft-launch/onboarding/">Continue without scripting →</a></p>
+    </noscript>
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
