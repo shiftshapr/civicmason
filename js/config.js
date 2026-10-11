@@ -3,7 +3,7 @@
  */
 export function getGovhubOrigin() {
   const m = document.querySelector('meta[name="govhub-origin"]');
-  return ((m && m.content) || 'https://govhub.live').replace(/\/$/, '');
+  return ((m && m.content) || 'https://interfacehub.net').replace(/\/$/, '');
 }
 
 export function onboardingUrl(intent) {
